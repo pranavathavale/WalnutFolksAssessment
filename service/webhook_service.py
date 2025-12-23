@@ -1,5 +1,5 @@
 from model.transactions_db import insert_transaction, fetch_transaction
-from worker_service import enqueue_processing
+from service.worker_service import enqueue_processing
 from fastapi import HTTPException
 
 REQUIRED_FIELDS = {
