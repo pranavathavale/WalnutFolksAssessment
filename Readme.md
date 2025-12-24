@@ -17,7 +17,9 @@ GET ENDPOINT
 HEALTH ENDPOINT
 3. https://walnutfolksassessment.onrender.com
 
-
+NOTE: I am using render of free tier if inactive for 15 mins it puts my web service to sleep. 
+Kindly, use the health endpoint link using browser to wake up the service before testing the assessment.
+Still, in case of any issues, please let me know I will restart the service.
 
 Requirements as per the pdf :
 1. Must return 202 to indicate immediate acceptance
@@ -36,9 +38,7 @@ FRAMEWORKS & CLOUD INFRA:-
 3. Redis -> Using it as message broker for celery so even if web service crash task is not lost which is a key requirement.
 4. PostgreSQL -> Persistent storage.
 5. Render -> Cloud hosting. 
-NOTE: I am using render of free tier if inactive for 15 mins it puts my web service to sleep. 
-Kindly, use the health endpoint link using browser to wake up the service before testing the assessment.
-Still, in case of any issues, please let me know I will restart the service.
+
 
 WORKFLOW:-
 1. Webhook triggered
