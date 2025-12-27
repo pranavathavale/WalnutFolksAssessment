@@ -54,7 +54,7 @@ def update_transaction_processed(transaction_id):
     conn.close()
 
 
-def fetch_transaction(transaction_id):
+def fetch_transaction_from_db(transaction_id):
     conn = get_connection()
     cur = conn.cursor()
 

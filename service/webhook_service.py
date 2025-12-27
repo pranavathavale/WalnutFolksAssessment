@@ -1,4 +1,4 @@
-from model.transactions_db import insert_transaction, fetch_transaction
+from model.transactions_db import insert_transaction, fetch_transaction_from_db
 from service.worker_service import enqueue_processing
 from fastapi import HTTPException
 
@@ -23,7 +23,7 @@ def create_transaction(payload: dict):
 
 
 def get_transaction(transaction_id: str):
-    transaction =  fetch_transaction(transaction_id)
+    transaction =  fetch_transaction_from_db(transaction_id)
     if not transaction:
         raise HTTPException(status_code=404, detail="Transaction not found")
-    return transaction
+    return [transaction]
